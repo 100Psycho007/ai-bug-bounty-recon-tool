@@ -1,0 +1,46 @@
+{
+  "target": "example.com",
+  "scan_date": "2025-01-15T10:30:00Z",
+  "subdomains": [
+    "www.example.com",
+    "mail.example.com",
+    "ftp.example.com",
+    "admin.example.com",
+    "api.example.com",
+    "cdn.example.com",
+    "dev.example.com",
+    "test.example.com",
+    "staging.example.com",
+    "support.example.com"
+  ],
+  "open_ports": [
+    21,
+    22,
+    25,
+    53,
+    80,
+    110,
+    143,
+    443,
+    993,
+    995,
+    3306,
+    3389,
+    5432,
+    8080,
+    8443
+  ],
+  "vulnerabilities": [
+    "CVE-2021-41773",
+    "CVE-2021-42013",
+    "CVE-2016-6210",
+    "CVE-2018-15473",
+    "CVE-2021-2154",
+    "CVE-2020-14765",
+    "CVE-2021-3393",
+    "CVE-2020-25696",
+    "CVE-2011-2523",
+    "CVE-2010-4221"
+  ],
+  "ai_summary": "Reconnaissance completed for example.com. Discovered 10 subdomains, expanding the attack surface. Identified 15 open ports, indicating active services. Critical services detected on ports: 21, 22, 80, 443, 3306, 3389, 5432. Found 10 potential vulnerabilities requiring investigation. Web server vulnerabilities detected - immediate attention required. Database vulnerabilities identified - review access controls. Recommend conducting detailed vulnerability assessment and penetration testing."
+}
