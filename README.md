@@ -69,108 +69,101 @@ OPENAI_API_KEY=your_openai_api_key_here
 SHODAN_API_KEY=your_shodan_api_key_here
 
 # Censys API for network mapping
-CENSYS_API_ID=your_censys_api_id_here
-CENSYS_API_SECRET=your_censys_api_secret_here
-```
 
-## 🚀 Usage
+# 🕵️‍♂️ AI Bug Bounty Recon Tool
 
-### Basic Usage
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Latest-FF4B4B?logo=streamlit&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![GitHub stars](https://img.shields.io/github/stars/100Psycho007/ai-bug-bounty-recon-tool?style=social)
+![Status](https://img.shields.io/badge/Status-Active-success)
+[![CI Tests](https://github.com/100Psycho007/ai-bug-bounty-recon-tool/actions/workflows/tests.yml/badge.svg)](https://github.com/100Psycho007/ai-bug-bounty-recon-tool/actions)
+
+An **AI-powered reconnaissance assistant** designed for bug bounty hunters, security researchers, and penetration testers.  
+It automates **subdomain discovery, port scanning, vulnerability hints, and AI-based summaries** — all in a clean, web-based Streamlit dashboard.
+
+---
+
+## 🚀 Features
+
+- **Subdomain Discovery** — Uses `subfinder` for finding hidden assets.
+- **Port Scanning** — Integrates with `nmap` for fast and detailed port mapping.
+- **AI Summaries** — Uses GPT to analyze recon results and provide actionable insights.
+- **Dashboard UI** — Built with Streamlit for an intuitive, professional interface.
+- **Export Reports** — Save recon results in CSV/JSON formats for later use.
+
+---
+
+## 📸 Screenshot
+> *(Add a screenshot of the tool’s dashboard here once you run it locally)*
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the repository
 ```bash
-# Analyze a domain
-python run.py example.com
-
-# Analyze an IP address
-python run.py 192.168.1.1
+git clone https://github.com/100Psycho007/ai-bug-bounty-recon-tool.git
+cd ai-bug-bounty-recon-tool
 ```
-
-### Advanced Usage
+### 2️⃣ Create a virtual environment
 ```bash
-# Detailed output with AI analysis
-python run.py example.com --output detailed
+python -m venv venv
+source venv/bin/activate   # macOS/Linux
+venv\Scripts\activate      # Windows
+```
+### 3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
+### 4️⃣ (Optional) Install external tools
+- Subfinder – Installation Guide
+- Nmap – Download
 
-# Full comprehensive report
-python run.py example.com --output full
-
-# Disable AI analysis (use basic analysis only)
-python run.py example.com --no-ai
-
-# Save detailed reports to files
-python run.py example.com --save-report
-
-# Basic output only
-python run.py example.com --output basic
+### 5️⃣ Set environment variables
+Create a .env file:
+```env
+OPENAI_API_KEY=your_api_key_here
 ```
 
-### Command Line Options
-- `--output, -o`: Output detail level (`basic`, `detailed`, `full`)
-- `--no-ai`: Disable AI analysis
-- `--save-report`: Save detailed reports to files
-- `--config`: Path to configuration file
-
-## 📊 Output Examples
-
-### Basic Output
+## ▶️ Usage
+```bash
+streamlit run app.py
 ```
-=== BASIC RESULTS ===
-Target: example.com
-Priority Score: 7/10
-Critical Vulnerabilities: 2
-Medium Risk Findings: 3
+Open your browser and go to:
+```
+http://localhost:8501
 ```
 
-### Detailed Output
-```
-=== DETAILED RESULTS ===
-Target: example.com
-Priority Score: 7/10
-Critical Vulnerabilities: 2
-Medium Risk Findings: 3
-
-DNS Records
-┌──────┬─────────────────┐
-│ Type │ Value           │
-├──────┼─────────────────┤
-│ A    │ 93.184.216.34  │
-│ MX   │ mail.example.com│
-└──────┴─────────────────┘
-
-Discovered Subdomains
-┌──────────────┐
-│ Subdomain   │
-├──────────────┤
-│ www          │
-│ mail         │
-│ admin        │
-└──────────────┘
+## 📂 Project Structure
+```bash
+ai-bug-bounty-recon-tool/
+│── app.py                 # Main Streamlit app
+│── recon/
+│   ├── subdomain_finder.py
+│   ├── port_scanner.py
+│   ├── ai_analyzer.py
+│── requirements.txt
+│── README.md
+│── .env.example
+│── reports/               # Generated recon reports
+│── .github/workflows/tests.yml   # GitHub Actions CI/CD config
 ```
 
-## 🔧 Configuration
+## 📜 License
+This project is licensed under the MIT License.
 
-### Environment Variables
-The tool automatically loads configuration from environment variables:
+## 🌟 Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to star the repo if you find it useful.
 
-- `OPENAI_API_KEY`: Required for AI-powered analysis
-- `SHODAN_API_KEY`: Required for Shodan intelligence
-- `CENSYS_API_ID`: Required for Censys network mapping
-- `CENSYS_API_SECRET`: Required for Censys authentication
+## 🙌 Acknowledgements
+- ProjectDiscovery Subfinder
+- Nmap
+- OpenAI
+- Streamlit
 
-### API Key Setup
-
-#### OpenAI API
-1. Visit [OpenAI Platform](https://platform.openai.com/)
-2. Create an account and generate an API key
-3. Add to your `.env` file
-
-#### Shodan API
-1. Visit [Shodan](https://account.shodan.io/)
-2. Create an account and get your API key
-3. Add to your `.env` file
-
-#### Censys API
-1. Visit [Censys](https://censys.io/)
-2. Create an account and generate API credentials
-3. Add to your `.env` file
+💡 This project was built as part of my Cybersecurity & AI Portfolio, showcasing automation, AI integration, and security tooling expertise.
 
 ## 📁 Project Structure
 
