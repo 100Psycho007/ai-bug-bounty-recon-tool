@@ -72,12 +72,17 @@ SHODAN_API_KEY=your_shodan_api_key_here
 
 # 🕵️‍♂️ AI Bug Bounty Recon Tool
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-Latest-FF4B4B?logo=streamlit&logoColor=white)
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![GitHub stars](https://img.shields.io/github/stars/100Psycho007/ai-bug-bounty-recon-tool?style=social)
-![Status](https://img.shields.io/badge/Status-Active-success)
-[![CI Tests](https://github.com/100Psycho007/ai-bug-bounty-recon-tool/actions/workflows/tests.yml/badge.svg)](https://github.com/100Psycho007/ai-bug-bounty-recon-tool/actions)
+
+<p align="left">
+	<img src="https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white" alt="Python">
+	<img src="https://img.shields.io/badge/Streamlit-Latest-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit">
+	<img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
+	<img src="https://img.shields.io/github/stars/100Psycho007/ai-bug-bounty-recon-tool?style=social" alt="GitHub stars">
+	<img src="https://img.shields.io/badge/Status-Active-success" alt="Status">
+	<a href="https://github.com/100Psycho007/ai-bug-bounty-recon-tool/actions">
+		<img src="https://github.com/100Psycho007/ai-bug-bounty-recon-tool/actions/workflows/tests.yml/badge.svg" alt="CI Tests">
+	</a>
+</p>
 
 An **AI-powered reconnaissance assistant** designed for bug bounty hunters, security researchers, and penetration testers.  
 It automates **subdomain discovery, port scanning, vulnerability hints, and AI-based summaries** — all in a clean, web-based Streamlit dashboard.
